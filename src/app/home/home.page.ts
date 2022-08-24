@@ -13,7 +13,7 @@ export class HomePage implements OnInit {
   constructor(private anim: AnimationController) {}
 
   validar(){
-    if(this.input == '' || this.input == null){
+    if(this.input === '' || this.input == null){
     this.anim.create()
     .addElement(document.querySelector('#input'))
     .duration(100)
@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
     .fromTo('border', '1px red solid', '1px black solid')
     .fromTo('background','red','white')
     .fromTo('background','red','white')
-    .play()
+    .play();
   }
 }
 
